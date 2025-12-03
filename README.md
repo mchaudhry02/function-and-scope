@@ -1,75 +1,89 @@
-Event Management Functions
+# Event Management Functions
+
 A collection of reusable JavaScript functions for managing programming event logistics.
 
-Author
-[Your Name]
-Functions
-1. generateBadge(name, role)
+## Author
+- Muhtar C
+
+## Functions
+
+### 1. generateBadge(name, role)
 Generates a formatted attendee badge.
 
-Parameters:
+**Parameters:**
+- `name` (string): The attendee's name
+- `role` (string): The attendee's role (e.g., "speaker", "attendee")
 
-name (string): The attendee's name
-role (string): The attendee's role (e.g., "speaker", "attendee")
-Returns: String in format "Name: [name], Role: [role]"
+**Returns:** String in format "Name: [name], Role: [role]"
 
-Example:
-
-javascript
+**Example:**
+```javascript
 generateBadge("Alice", "speaker");
 // Output: "Name: Alice, Role: Speaker"
-2. calculateCost(attendees, costPerAttendee)
+```
+
+### 2. calculateCost(attendees, costPerAttendee)
 Calculates total event cost with automatic discount for large events.
 
-Parameters:
+**Parameters:**
+- `attendees` (number): Number of attendees
+- `costPerAttendee` (number): Cost per attendee
 
-attendees (number): Number of attendees
-costPerAttendee (number): Cost per attendee
-Returns: Number representing total cost (with 10% discount if attendees > 100)
+**Returns:** Number representing total cost (with 10% discount if attendees > 100)
 
-Example:
-
-javascript
+**Example:**
+```javascript
 calculateCost(120, 25);
 // Output: 2700
-3. validateEmail(email)
+```
+
+### 3. validateEmail(email)
 Validates email addresses for registration.
 
-Parameters:
+**Parameters:**
+- `email` (string): Email address to validate
 
-email (string): Email address to validate
-Returns: Boolean (true if valid, false otherwise)
+**Returns:** Boolean (true if valid, false otherwise)
 
-Example:
-
-javascript
+**Example:**
+```javascript
 validateEmail("test@example.com");
 // Output: true
-How to Run
-Option 1: Node.js (Command Line)
-bash
+```
+
+## How to Run
+
+### Option 1: Node.js (Command Line)
+```bash
 # Run tests
 node tests.js
-Option 2: Browser
-Open index.html in your web browser and check the console (F12).
+```
 
-Project Structure
+### Option 2: Browser
+Open `index.html` in your web browser and check the console (F12).
+
+## Project Structure
+```
 event-management/
 ├── README.md          # This file
 ├── functions.js       # Main function implementations
 ├── tests.js          # Test cases (Node.js)
 ├── index.html        # Browser testing page
 └── .gitignore        # Git ignore file
-Design Decisions
-Single Responsibility: Each function performs one specific task
-Clear Parameters: Function names and parameters are self-documenting
-Consistent Returns: Each function returns a predictable type
-Input Formatting: generateBadge capitalizes roles for consistency
-Testing Approach
-Each team member contributed test cases covering:
+```
 
-Standard use cases
-Edge cases (exactly 100 attendees, empty strings)
-Various input formats (uppercase, mixed case)
+## Design Decisions
+
+1. **Single Responsibility**: Each function performs one specific task
+2. **Clear Parameters**: Function names and parameters are self-documenting
+3. **Consistent Returns**: Each function returns a predictable type
+4. **Input Formatting**: generateBadge capitalizes roles for consistency
+
+## Testing Approach
+
+Test cases cover:
+- Standard use cases
+- Edge cases (exactly 100 attendees, empty strings)
+- Various input formats (uppercase, mixed case)
+
 Total: 17 test cases across all functions
-
