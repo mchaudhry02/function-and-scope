@@ -68,7 +68,6 @@ event-management/
 ├── README.md          # This file
 ├── functions.js       # Main function implementations
 ├── tests.js          # Test cases (Node.js)
-├── index.html        # Browser testing page
 └── .gitignore        # Git ignore file
 ```
 
